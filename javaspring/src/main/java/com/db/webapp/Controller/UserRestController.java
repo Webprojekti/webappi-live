@@ -35,11 +35,9 @@ public class UserRestController {
     @Autowired
     private V6repo v6repo;
     @Autowired
-    private V7repo v7repo;
+    private V7ppmrepo v7ppmrepo;
     @Autowired
-    private V7crepo v7crepo;
-    @Autowired
-    private V7trepo v7trepo;
+    private V750repo v750repo;
     @Autowired
     private V8repo v8repo;
     @Autowired
@@ -132,17 +130,13 @@ public class UserRestController {
     List<V6> datav6() {
         return v6repo.findAll();
     }
-    @GetMapping("/v7")
-    List<V7> datav7() {
-        return v7repo.findAll();
+    @GetMapping("/v7ppm")
+    List<V7ppm> datav7ppm() {
+        return v7ppmrepo.findAll();
     }
-    @GetMapping("/v7c")
-    List<V7c> datav7c() {
-        return v7crepo.findAll();
-    }
-    @GetMapping("/v7t")
-    List<V7t> datav7t() {
-        return v7trepo.findAll();
+    @GetMapping("/v750")
+    List<V750> datav750() {
+        return v750repo.findAll();
     }
     @GetMapping("/v8")
     List<Map<String,Object>> datav8() {
