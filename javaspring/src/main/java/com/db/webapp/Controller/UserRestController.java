@@ -42,6 +42,8 @@ public class UserRestController {
     private V8repo v8repo;
     @Autowired
     private V9repo v9repo;
+    @Autowired
+    private V10repo v10repo;
 
     @PostMapping("/register")
     public ResponseEntity<String> register(
@@ -146,7 +148,10 @@ public class UserRestController {
     List<V9> datav9() {
         return v9repo.findAll();
     }
-
+    @GetMapping("/v10")
+    List<V10> datav10() {
+        return v10repo.findAll();
+    }
 }
 
 
